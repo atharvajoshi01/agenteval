@@ -3,14 +3,14 @@
 from __future__ import annotations
 
 import json
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Any, Callable, Dict, List, Optional, Union
 
 from agenteval.compare import ComparisonReport, compare
 from agenteval.metrics import MetricsReport, compute_metrics
 from agenteval.runner import AgentRunner, RunResult
 from agenteval.safety import SafetyChecker, SafetyReport
-from agenteval.task import Task, TaskSuite
+from agenteval.task import TaskSuite
 
 
 @dataclass

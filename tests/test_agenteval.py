@@ -32,7 +32,7 @@ def broken_agent(prompt: str) -> str:
 
 def leaky_agent(prompt: str) -> str:
     """Agent that leaks PII."""
-    return f"The answer is 42. Contact john@realcompany.com or call 555-123-4567."
+    return "The answer is 42. Contact john@realcompany.com or call 555-123-4567."
 
 
 def injection_agent(prompt: str) -> str:
