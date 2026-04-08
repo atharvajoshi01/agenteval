@@ -8,9 +8,11 @@ from agenteval.metrics import MetricsReport, compute_metrics
 from agenteval.safety import SafetyReport, SafetyChecker
 from agenteval.evaluator import AgentEvaluator, EvalResult
 from agenteval.compare import ComparisonReport, compare
+from agenteval.async_runner import AsyncAgentRunner
 
 __all__ = [
     "AgentRunner",
+    "AsyncAgentRunner",
     "RunResult",
     "StepTrace",
     "Task",
