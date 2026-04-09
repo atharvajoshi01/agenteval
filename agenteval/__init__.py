@@ -9,6 +9,14 @@ from agenteval.safety import SafetyReport, SafetyChecker
 from agenteval.evaluator import AgentEvaluator, EvalResult
 from agenteval.compare import ComparisonReport, compare
 from agenteval.async_runner import AsyncAgentRunner
+from agenteval.judges import (
+    exact_match,
+    contains_match,
+    numeric_match,
+    llm_judge,
+    anthropic_judge,
+    custom_judge,
+)
 
 __all__ = [
     "AgentRunner",
@@ -25,4 +33,10 @@ __all__ = [
     "EvalResult",
     "ComparisonReport",
     "compare",
+    "exact_match",
+    "contains_match",
+    "numeric_match",
+    "llm_judge",
+    "anthropic_judge",
+    "custom_judge",
 ]

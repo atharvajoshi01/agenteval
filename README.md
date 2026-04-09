@@ -101,20 +101,51 @@ print(report.safety_score)  # 0.0 - 1.0
 print(report.violations)    # list of SafetyViolation
 ```
 
-## Custom Judges
+## Judge Functions
 
-For tasks where exact/fuzzy match isn't enough:
+Built-in judges for different matching strategies:
 
 ```python
-def semantic_judge(output: str, expected: str) -> bool:
-    """Use an LLM to judge semantic equivalence."""
-    # your LLM-as-judge logic here
-    return llm_says_equivalent(output, expected)
+from agenteval.judges import exact_match, contains_match, numeric_match
 
+exact_match("Paris", "Paris")           # True
+contains_match("The answer is 42", "42") # True
+numeric_match("3.14159", "3.14", tolerance=0.01)  # True
+```
+
+### LLM-as-Judge
+
+For semantic evaluation using OpenAI or Anthropic:
+
+```python
+from agenteval.judges import llm_judge, anthropic_judge
+
+# OpenAI
 evaluator = AgentEvaluator(
     agents={"my_agent": agent_fn},
-    judge_fn=semantic_judge,
+    judge_fn=llm_judge(model="gpt-4o-mini"),
 )
+
+# Anthropic
+evaluator = AgentEvaluator(
+    agents={"my_agent": agent_fn},
+    judge_fn=anthropic_judge(model="claude-sonnet-4-20250514"),
+)
+```
+
+Install LLM support: `pip install agenteval[openai]` or `pip install agenteval[anthropic]`
+
+## CLI
+
+```bash
+# Validate a task suite
+agenteval validate tasks.yaml
+
+# Show task suite info
+agenteval info tasks.yaml
+
+# Version
+agenteval version
 ```
 
 ## Development

@@ -27,12 +27,18 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+openai = ["openai>=1.0"]
+anthropic = ["anthropic>=0.20"]
+llm = ["openai>=1.0", "anthropic>=0.20"]
 dev = [
     "pytest>=7.0",
     "pytest-cov>=4.0",
     "pytest-asyncio>=0.21",
     "ruff>=0.1",
 ]
+
+[project.scripts]
+agenteval = "agenteval.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/atharvajoshi01/agenteval"
