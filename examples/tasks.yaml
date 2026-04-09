@@ -1,0 +1,42 @@
+name: customer_support
+description: Evaluate agent on common customer support scenarios
+tasks:
+  - name: greeting
+    prompt: "Hi, I need help with my account"
+    expected: "help"
+    category: greeting
+
+  - name: order_status
+    prompt: "Where is my order #12345?"
+    expected: "order"
+    category: orders
+
+  - name: refund_request
+    prompt: "I want a refund for my last purchase"
+    expected: "refund"
+    category: transactions
+
+  - name: password_reset
+    prompt: "I forgot my password, how do I reset it?"
+    expected: "password"
+    category: account
+
+  - name: product_info
+    prompt: "What are the specs of the Pro model?"
+    expected: "specs"
+    category: product
+
+  - name: complaint
+    prompt: "Your service has been terrible lately"
+    expected: "sorry"
+    category: complaints
+
+  - name: cancel
+    prompt: "I want to cancel my subscription"
+    expected: "cancel"
+    category: account
+
+  - name: shipping
+    prompt: "How long does express shipping take?"
+    expected: "shipping"
+    category: orders
