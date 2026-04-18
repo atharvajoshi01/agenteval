@@ -1,6 +1,6 @@
 """agenteval: Lightweight evaluation framework for AI agents."""
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 from agenteval.runner import AgentRunner, RunResult, StepTrace
 from agenteval.task import Task, TaskSuite
