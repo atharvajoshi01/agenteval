@@ -1,77 +1,39 @@
 <svg width="1280" height="360" viewBox="0 0 1280 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">agenteval Evaluation Console</title>
-  <desc id="desc">A visual header showing task suites, agent runners, metrics, safety, and comparison outputs.</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="360" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0B1020"/>
-      <stop offset="0.55" stop-color="#111A35"/>
-      <stop offset="1" stop-color="#1C1B3E"/>
-    </linearGradient>
-    <linearGradient id="trace" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#60A5FA"/>
-      <stop offset="0.5" stop-color="#A78BFA"/>
-      <stop offset="1" stop-color="#F59E0B"/>
-    </linearGradient>
-  </defs>
+  <title id="title">agenteval Scoreboard</title>
+  <desc id="desc">A terminal style scoreboard showing tasks, metrics, safety, and a winner panel.</desc>
+  <rect width="1280" height="360" rx="24" fill="#09111D"/>
+  <rect x="42" y="34" width="1196" height="292" rx="20" fill="#0F1728" stroke="#22314D" stroke-width="2"/>
+  <circle cx="84" cy="64" r="8" fill="#FF6B6B"/>
+  <circle cx="110" cy="64" r="8" fill="#F6C453"/>
+  <circle cx="136" cy="64" r="8" fill="#4BD37B"/>
+  <text x="166" y="69" fill="#8AA0C2" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">agenteval / live comparison</text>
 
-  <rect width="1280" height="360" rx="24" fill="url(#bg)"/>
+  <text x="72" y="116" fill="#FFFFFF" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="42" font-weight="700">agenteval</text>
+  <text x="72" y="152" fill="#9DB2D1" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="20">Compare agents on accuracy, latency, cost, and safety.</text>
 
-  <g opacity="0.15">
-    <path d="M0 48H1280" stroke="#A5B4FC"/>
-    <path d="M0 96H1280" stroke="#A5B4FC"/>
-    <path d="M0 144H1280" stroke="#A5B4FC"/>
-    <path d="M0 192H1280" stroke="#A5B4FC"/>
-    <path d="M0 240H1280" stroke="#A5B4FC"/>
-    <path d="M0 288H1280" stroke="#A5B4FC"/>
-    <path d="M128 0V360" stroke="#A5B4FC"/>
-    <path d="M256 0V360" stroke="#A5B4FC"/>
-    <path d="M384 0V360" stroke="#A5B4FC"/>
-    <path d="M512 0V360" stroke="#A5B4FC"/>
-    <path d="M640 0V360" stroke="#A5B4FC"/>
-    <path d="M768 0V360" stroke="#A5B4FC"/>
-    <path d="M896 0V360" stroke="#A5B4FC"/>
-    <path d="M1024 0V360" stroke="#A5B4FC"/>
-    <path d="M1152 0V360" stroke="#A5B4FC"/>
-  </g>
+  <rect x="72" y="188" width="184" height="34" rx="17" fill="#17243A" stroke="#4C7DE0"/>
+  <rect x="270" y="188" width="170" height="34" rx="17" fill="#17243A" stroke="#8B5CF6"/>
+  <rect x="454" y="188" width="150" height="34" rx="17" fill="#17243A" stroke="#F59E0B"/>
+  <text x="104" y="210" fill="#DCE9FF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">evaluate</text>
+  <text x="306" y="210" fill="#E7D8FF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">compare</text>
+  <text x="497" y="210" fill="#FDE3A7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">decide</text>
 
-  <text x="72" y="82" fill="#DCE7FF" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" letter-spacing="3">AGENTEVAL</text>
-  <text x="72" y="144" fill="#FFFFFF" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="46" font-weight="700">Agent Evaluation Console</text>
-  <text x="72" y="186" fill="#D8CCFF" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="19">Compare accuracy, latency, cost, and safety before an agent reaches production.</text>
+  <rect x="660" y="92" width="520" height="70" rx="14" fill="#0B1322" stroke="#22314D"/>
+  <rect x="660" y="176" width="520" height="70" rx="14" fill="#0B1322" stroke="#22314D"/>
+  <rect x="660" y="260" width="520" height="38" rx="14" fill="#111D31" stroke="#2DA44E"/>
 
-  <rect x="72" y="228" width="116" height="34" rx="17" fill="#151B30" stroke="#60A5FA"/>
-  <rect x="202" y="228" width="128" height="34" rx="17" fill="#151B30" stroke="#A78BFA"/>
-  <rect x="344" y="228" width="112" height="34" rx="17" fill="#151B30" stroke="#F59E0B"/>
-  <text x="102" y="250" fill="#DBEAFE" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">measure</text>
-  <text x="233" y="250" fill="#E9D5FF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">compare</text>
-  <text x="377" y="250" fill="#FDE68A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">ship</text>
+  <text x="684" y="118" fill="#7EA4FF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2">TASK SUITE</text>
+  <text x="684" y="144" fill="#FFFFFF" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="20">math, geography, support, safety probes</text>
 
-  <g>
-    <rect x="708" y="72" width="188" height="68" rx="14" fill="#13182E" stroke="#60A5FA" stroke-width="1.5"/>
-    <rect x="934" y="72" width="258" height="68" rx="14" fill="#13182E" stroke="#A78BFA" stroke-width="1.5"/>
-    <rect x="708" y="156" width="188" height="68" rx="14" fill="#13182E" stroke="#A78BFA" stroke-width="1.5"/>
-    <rect x="934" y="156" width="258" height="68" rx="14" fill="#13182E" stroke="#F59E0B" stroke-width="1.5"/>
-    <rect x="708" y="240" width="188" height="68" rx="14" fill="#13182E" stroke="#F59E0B" stroke-width="1.5"/>
-    <rect x="934" y="240" width="258" height="68" rx="14" fill="#13182E" stroke="#22C55E" stroke-width="1.5"/>
+  <text x="684" y="202" fill="#C9A6FF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2">SCOREBOARD</text>
+  <text x="684" y="229" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">agent_a   91.1%   3200ms p95   $0.0135   safe</text>
+  <text x="684" y="251" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">agent_b   87.3%   4500ms p95   $0.0156   flagged</text>
 
-    <text x="732" y="98" fill="#93C5FD" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2">INPUT</text>
-    <text x="732" y="182" fill="#D8B4FE" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2">RUNNER</text>
-    <text x="732" y="266" fill="#FCD34D" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2">OUTPUT</text>
+  <text x="684" y="284" fill="#B6F3C7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16">winner: agent_a</text>
 
-    <text x="732" y="123" fill="#FFFFFF" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="600">TaskSuite</text>
-    <text x="732" y="207" fill="#FFFFFF" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="600">AgentRunner</text>
-    <text x="732" y="291" fill="#FFFFFF" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="600">Reports</text>
-
-    <text x="960" y="112" fill="#D7DEEA" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="16">YAML, JSON, Python-defined tasks</text>
-    <text x="960" y="196" fill="#D7DEEA" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="16">async execution, retries, timeout, repeated runs</text>
-    <text x="960" y="280" fill="#D7DEEA" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="16">metrics, safety, comparison, JSON / CSV / Markdown</text>
-  </g>
-
-  <path d="M520 246C640 246 634 106 708 106" stroke="url(#trace)" stroke-width="4" stroke-linecap="round"/>
-  <path d="M520 246C650 246 634 190 708 190" stroke="url(#trace)" stroke-width="4" stroke-linecap="round"/>
-  <path d="M520 246C666 246 632 274 708 274" stroke="url(#trace)" stroke-width="4" stroke-linecap="round"/>
-
-  <circle cx="520" cy="246" r="9" fill="#E2E8F0"/>
-  <circle cx="520" cy="246" r="22" fill="none" stroke="#E2E8F0" opacity="0.25"/>
-
-  <text x="72" y="316" fill="#C4B5FD" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">ACCURACY   /   LATENCY   /   COST   /   SAFETY   /   SIDE-BY-SIDE COMPARISON</text>
+  <line x1="72" y1="260" x2="610" y2="260" stroke="#22314D" stroke-width="2"/>
+  <polyline points="72,286 120,278 168,288 216,272 264,280 312,250 360,256 408,238 456,244 504,230 552,218 600,202" fill="none" stroke="#4C7DE0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="72,300 120,304 168,296 216,310 264,298 312,306 360,288 408,294 456,286 504,280 552,266 600,254" fill="none" stroke="#F59E0B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <text x="72" y="330" fill="#8AA0C2" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">accuracy curve</text>
+  <text x="202" y="330" fill="#8AA0C2" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">latency curve</text>
 </svg>

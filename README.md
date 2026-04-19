@@ -9,7 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-2da44e.svg)](LICENSE)
 [![Status: Alpha](https://img.shields.io/badge/status-alpha-f59e0b.svg)](#current-scope)
 
-Evaluate agents like systems, not demos.
+Figure out which agent is actually better before you ship it.
 
 </div>
 
@@ -20,7 +20,7 @@ Evaluate agents like systems, not demos.
 - `cost`
 - `safety`
 
-It is designed for string-in / string-out agent interfaces, which makes it useful for quick baselines, regression checks, side-by-side comparisons, and task-suite based evaluation without binding the repo to one orchestration framework.
+It is designed for string-in / string-out agent interfaces, which makes it useful for quick baselines, regression checks, side by side comparisons, and task-suite based evaluation without binding the repo to one orchestration framework.
 
 ## Why This Exists
 

@@ -7,7 +7,7 @@ name = "agenteval"
 version = "0.2.0"
 description = "Lightweight evaluation framework for AI agents"
 readme = "README.md"
-license = {text = "MIT"}
+license = "MIT"
 requires-python = ">=3.9"
 authors = [
     {name = "Atharva Joshi", email = "atharvaj2112@gmail.com"},
@@ -15,7 +15,6 @@ authors = [
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
@@ -44,6 +43,9 @@ agenteval = "agenteval.cli:main"
 Homepage = "https://github.com/atharvajoshi01/agenteval"
 Repository = "https://github.com/atharvajoshi01/agenteval"
 Issues = "https://github.com/atharvajoshi01/agenteval/issues"
+
+[tool.setuptools]
+packages = ["agenteval"]
 
 [tool.ruff]
 line-length = 100
