@@ -1,39 +1,58 @@
 <svg width="1280" height="360" viewBox="0 0 1280 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">agenteval Scoreboard</title>
-  <desc id="desc">A terminal style scoreboard showing tasks, metrics, safety, and a winner panel.</desc>
-  <rect width="1280" height="360" rx="24" fill="#09111D"/>
-  <rect x="42" y="34" width="1196" height="292" rx="20" fill="#0F1728" stroke="#22314D" stroke-width="2"/>
-  <circle cx="84" cy="64" r="8" fill="#FF6B6B"/>
-  <circle cx="110" cy="64" r="8" fill="#F6C453"/>
-  <circle cx="136" cy="64" r="8" fill="#4BD37B"/>
-  <text x="166" y="69" fill="#8AA0C2" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">agenteval / live comparison</text>
+  <title id="title">agenteval Arena</title>
+  <desc id="desc">An arena style evaluation board with live metrics, safety flags, and a winner lane for agent comparison.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#070D17"/>
+      <stop offset="1" stop-color="#121A2A"/>
+    </linearGradient>
+    <linearGradient id="track" x1="112" y1="0" x2="1120" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B82F6"/>
+      <stop offset="0.5" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
 
-  <text x="72" y="116" fill="#FFFFFF" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="42" font-weight="700">agenteval</text>
-  <text x="72" y="152" fill="#9DB2D1" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="20">Compare agents on accuracy, latency, cost, and safety.</text>
+  <rect width="1280" height="360" rx="24" fill="url(#bg)"/>
+  <circle cx="1110" cy="74" r="92" fill="#1E2C48" opacity="0.25"/>
+  <circle cx="1110" cy="74" r="54" fill="#24324C" opacity="0.35"/>
 
-  <rect x="72" y="188" width="184" height="34" rx="17" fill="#17243A" stroke="#4C7DE0"/>
-  <rect x="270" y="188" width="170" height="34" rx="17" fill="#17243A" stroke="#8B5CF6"/>
-  <rect x="454" y="188" width="150" height="34" rx="17" fill="#17243A" stroke="#F59E0B"/>
-  <text x="104" y="210" fill="#DCE9FF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">evaluate</text>
-  <text x="306" y="210" fill="#E7D8FF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">compare</text>
-  <text x="497" y="210" fill="#FDE3A7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">decide</text>
+  <text x="76" y="78" fill="#8DA4CC" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3">EVALUATION ARENA</text>
+  <text x="76" y="136" fill="#FFFFFF" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="46" font-weight="700">agenteval</text>
+  <text x="76" y="175" fill="#A9BCD8" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="20">Compare agents before they reach production.</text>
 
-  <rect x="660" y="92" width="520" height="70" rx="14" fill="#0B1322" stroke="#22314D"/>
-  <rect x="660" y="176" width="520" height="70" rx="14" fill="#0B1322" stroke="#22314D"/>
-  <rect x="660" y="260" width="520" height="38" rx="14" fill="#111D31" stroke="#2DA44E"/>
+  <rect x="76" y="206" width="172" height="34" rx="17" fill="#132035" stroke="#3B82F6"/>
+  <rect x="262" y="206" width="162" height="34" rx="17" fill="#18203A" stroke="#8B5CF6"/>
+  <rect x="438" y="206" width="134" height="34" rx="17" fill="#1F2234" stroke="#F59E0B"/>
+  <text x="108" y="228" fill="#DCE9FF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">measure</text>
+  <text x="293" y="228" fill="#E8DAFF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">stress test</text>
+  <text x="474" y="228" fill="#FEE5B1" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">compare</text>
 
-  <text x="684" y="118" fill="#7EA4FF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2">TASK SUITE</text>
-  <text x="684" y="144" fill="#FFFFFF" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="20">math, geography, support, safety probes</text>
+  <rect x="76" y="264" width="1132" height="36" rx="18" fill="#0F1524" stroke="#26334D" stroke-width="2"/>
+  <path d="M112 282H1130" stroke="url(#track)" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="510" cy="282" r="10" fill="#3B82F6"/>
+  <circle cx="770" cy="282" r="10" fill="#8B5CF6"/>
+  <circle cx="1036" cy="282" r="10" fill="#F59E0B"/>
+  <text x="102" y="322" fill="#7E93B7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">task suite</text>
+  <text x="474" y="322" fill="#7E93B7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">runner</text>
+  <text x="744" y="322" fill="#7E93B7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">metrics</text>
+  <text x="994" y="322" fill="#7E93B7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">decision</text>
 
-  <text x="684" y="202" fill="#C9A6FF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2">SCOREBOARD</text>
-  <text x="684" y="229" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">agent_a   91.1%   3200ms p95   $0.0135   safe</text>
-  <text x="684" y="251" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">agent_b   87.3%   4500ms p95   $0.0156   flagged</text>
+  <rect x="646" y="68" width="536" height="158" rx="18" fill="#0C1320" stroke="#2A3750" stroke-width="2"/>
+  <text x="676" y="100" fill="#8DA4CC" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2">LIVE BOARD</text>
+  <text x="676" y="134" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">agent_a   91.1   acc   3.2s p95   $0.0135   safe</text>
+  <text x="676" y="164" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">agent_b   87.3   acc   4.5s p95   $0.0156   flagged</text>
+  <text x="676" y="194" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">agent_c   89.7   acc   3.9s p95   $0.0121   safe</text>
+  <line x1="676" y1="210" x2="1152" y2="210" stroke="#22314A" stroke-width="2"/>
+  <text x="676" y="240" fill="#AEE7BC" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16">winner: agent_a</text>
 
-  <text x="684" y="284" fill="#B6F3C7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16">winner: agent_a</text>
+  <rect x="980" y="94" width="168" height="92" rx="14" fill="#101A2B" stroke="#2F4365"/>
+  <text x="1004" y="120" fill="#91B5FF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" letter-spacing="2">SAFETY</text>
+  <rect x="1006" y="132" width="58" height="18" rx="9" fill="#21422D"/>
+  <text x="1020" y="145" fill="#C9F0D3" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">PASS</text>
+  <rect x="1078" y="132" width="58" height="18" rx="9" fill="#4A2A18"/>
+  <text x="1092" y="145" fill="#FFD9B5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">FLAG</text>
+  <text x="1006" y="170" fill="#93A5C2" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="14">PII, latency spikes, prompt injection</text>
 
-  <line x1="72" y1="260" x2="610" y2="260" stroke="#22314D" stroke-width="2"/>
-  <polyline points="72,286 120,278 168,288 216,272 264,280 312,250 360,256 408,238 456,244 504,230 552,218 600,202" fill="none" stroke="#4C7DE0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <polyline points="72,300 120,304 168,296 216,310 264,298 312,306 360,288 408,294 456,286 504,280 552,266 600,254" fill="none" stroke="#F59E0B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
-  <text x="72" y="330" fill="#8AA0C2" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">accuracy curve</text>
-  <text x="202" y="330" fill="#8AA0C2" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">latency curve</text>
+  <polyline points="676,84 706,74 736,86 766,70 796,82 826,66 856,78 886,64 916,74 946,58" fill="none" stroke="#3B82F6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
