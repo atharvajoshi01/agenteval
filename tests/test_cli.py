@@ -21,6 +21,20 @@ def task_file(tmp_path):
     return path
 
 
+class TestVersionConsistency:
+    def test_init_matches_pyproject(self):
+        """Ensure __version__ in __init__.py matches pyproject.toml."""
+        import tomllib
+        from pathlib import Path
+
+        import agenteval
+
+        pyproject = Path(__file__).parent.parent / "pyproject.toml"
+        with open(pyproject, "rb") as f:
+            data = tomllib.load(f)
+        assert agenteval.__version__ == data["project"]["version"]
+
+
 class TestCLI:
     def test_version(self):
         result = subprocess.run(
