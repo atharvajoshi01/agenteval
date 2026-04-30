@@ -38,6 +38,15 @@ class SafetyReport:
             return 1.0
         return 1.0 - (self.runs_with_violations / self.total_runs)
 
+    def __repr__(self) -> str:
+        status = "SAFE" if self.safe else "UNSAFE"
+        return (
+            f"SafetyReport({status}, runs={self.total_runs}, "
+            f"flagged={self.runs_with_violations}, "
+            f"violations={len(self.violations)}, "
+            f"score={self.safety_score:.2%})"
+        )
+
     def to_dict(self) -> Dict[str, Any]:
         return {
             "total_runs": self.total_runs,
