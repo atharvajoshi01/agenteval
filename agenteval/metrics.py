@@ -164,8 +164,9 @@ def compute_metrics(
     for cat, cat_results in categories.items():
         cat_correct = sum(1 for r in cat_results if _check_correct(r, judge_fn))
         cat_total = len(cat_results)
+        cat_answerable = sum(1 for r in cat_results if r.error is None)
         by_category[cat] = {
-            "accuracy": cat_correct / cat_total if cat_total > 0 else 0.0,
+            "accuracy": cat_correct / cat_answerable if cat_answerable > 0 else 0.0,
             "total": cat_total,
             "correct": cat_correct,
         }
